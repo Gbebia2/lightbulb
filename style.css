@@ -1,0 +1,137 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #E6E6FA; /* lavender */
+  color: #333; /* charcoal text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+.app-header {
+  text-align: center;
+  padding: 1rem;
+  background-color: #C7D9FF; /* soft blue */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+/* ===== Main Prompt Section ===== */
+.prompt-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.image-container img,
+.gif-container img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Buttons ===== */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+button {
+  background-color: #C7D9FF;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #A6C1FF;
+}
+
+/* ===== Footer Nav ===== */
+.nav-footer {
+  background-color: #C7D9FF;
+  padding: 0.5rem 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-footer nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.nav-footer a.active {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Fade-in animation for quote and author */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+button:hover {
+  transform: translateY(-2px); /* small lift effect */
+}
+
+button:active {
+  transform: translateY(1px); /* press effect */
+}
+
+button:focus {
+  outline: 2px solid #333; /* accessibility */
+  outline-offset: 2px;
+}
