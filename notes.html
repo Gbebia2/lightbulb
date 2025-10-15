@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes ✏️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>My Notes</h1>
+  </header>
+
+  <main class="prompt-section">
+    <div id="notes-list"></div>
+    <button id="clear-notes">🗑️ Clear All Notes</button>
+  </main>
+
+  <footer class="nav-footer">
+    <nav>
+      <a href="index.html">🏠</a>
+      <a href="favorites.html">💾</a>
+      <a href="notes.html">📝</a>
+      <a href="#">⚙️</a>
+    </nav>
+  </footer>
+
+  <script>
+    const notesList = document.getElementById('notes-list');
+    const clearBtn = document.getElementById('clear-notes');
+
+    // Load saved notes
+    const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
+
+    if (savedNotes.length === 0) {
+      notesList.innerHTML = "<p>No notes yet. Go add some!</p>";
+    } else {
+      savedNotes.forEach((item, i) => {
+        const div = document.createElement('div');
+        div.classList.add('quote');
+        div.innerHTML = `
+          <p>${item.quote}</p>
+          <p><strong>Note:</strong> ${item.note}</p>
+        `;
+        notesList.appendChild(div);
+      });
+    }
+
+    // Clear all notes
+    clearBtn.addEventListener('click', () => {
+      localStorage.removeItem('notes');
+      notesList.innerHTML = "<p>All notes cleared.</p>";
+    });
+  </script>
+</body>
+</html>

@@ -21,27 +21,38 @@
     </div>
 
     <div class="image-container">
-        <img src="https://via.placeholder.com/300x200?text=Image+Placeholder" alt="Prompt Image">
+        <img id="unsplash-img" src="https://via.placeholder.com/300x200?text=Image+Placeholder" alt="Prompt Image">
     </div>
 
     <div class="gif-container">
-        <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="Prompt GIF">
+      <img id="giphy-gif" src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="Prompt GIF">
     </div>
 
     <div class="buttons">
         <button id="refresh-btn">🔁 New Prompt</button>
         <button id="save-btn">💾 Save</button>
         <button id="note-btn">📝 Note</button>
-        <button id="share-btn">💬 Share</button>
     </div>
     </main>
+
+      <!-- Note Modal -->
+<div id="note-modal" class="modal-overlay">
+  <div class="modal-box">
+    <h3>Add a Note</h3>
+    <textarea id="note-text" placeholder="Write your thoughts here..."></textarea>
+    <div class="modal-actions">
+      <button id="save-note">Save Note</button>
+      <button id="close-note">Cancel</button>
+    </div>
+  </div>
+</div>
 
   <!-- Footer nav -->
   <footer class="nav-footer">
     <nav>
-      <a href="#" class="active">🏠</a>
-      <a href="#">🌟</a>
-      <a href="#">🧠</a>
+      <a href="index.html">🏠</a>
+      <a href="favorites.html">💾</a>
+      <a href="notes.html">📝</a>
       <a href="#">⚙️</a>
     </nav>
   </footer>
