@@ -21,7 +21,7 @@
     </div>
 
     <div class="image-container">
-        <img id="unsplash-img" src="https://via.placeholder.com/300x200?text=Image+Placeholder" alt="Prompt Image">
+        <img id="unsplash-img" src="" alt="Prompt Image">
     </div>
 
     <div class="gif-container">
@@ -35,17 +35,36 @@
     </div>
     </main>
 
-      <!-- Note Modal -->
-<div id="note-modal" class="modal-overlay">
-  <div class="modal-box">
-    <h3>Add a Note</h3>
-    <textarea id="note-text" placeholder="Write your thoughts here..."></textarea>
-    <div class="modal-actions">
-      <button id="save-note">Save Note</button>
-      <button id="close-note">Cancel</button>
+  <!-- Note Modal -->
+  <div id="note-modal" class="modal-overlay">
+    <div class="modal-box">
+      <h3>Add a Note</h3>
+      <textarea id="note-text" placeholder="Write your thoughts here..."></textarea>
+      <div class="modal-actions">
+        <button id="save-note">Save Note</button>
+        <button id="close-note">Cancel</button>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="modal-overlay">
+    <div class="modal-box">
+      <h2>Choose Theme</h2>
+      <select id="theme-select">
+        <option value="inspiration">Inspiration</option>
+        <option value="funny">Funny</option>
+        <option value="motivation">Motivation</option>
+      </select>
+      <div class="modal-actions">
+        <button id="save-theme">Save</button>
+        <button id="close-settings">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="settings-btn">⚙️ Settings</button>
+
 
   <!-- Footer nav -->
   <footer class="nav-footer">
@@ -53,7 +72,6 @@
       <a href="index.html">🏠</a>
       <a href="favorites.html">💾</a>
       <a href="notes.html">📝</a>
-      <a href="#">⚙️</a>
     </nav>
   </footer>
 

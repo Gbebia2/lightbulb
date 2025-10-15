@@ -1,4 +1,4 @@
-/* ===== General Reset ===== */
+/*  General Reset  */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Header ===== */
+/*  Header  */
 .app-header {
   text-align: center;
   padding: 1rem;
@@ -32,7 +32,7 @@ body {
   height: 50px;
 }
 
-/* ===== Main Prompt Section ===== */
+/*  Main Prompt Section  */
 .prompt-section {
   flex: 1;
   display: flex;
@@ -82,7 +82,7 @@ body {
   transform: scale(1);
 }
 
-/* ===== Buttons ===== */
+/*  Buttons  */
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -104,7 +104,7 @@ button:hover {
   background-color: #A6C1FF;
 }
 
-/* ===== Footer Nav ===== */
+/*  Footer Nav  */
 .nav-footer {
   background-color: #C7D9FF;
   padding: 0.5rem 0;
@@ -138,7 +138,7 @@ button:hover {
 }
 
 button:hover {
-  transform: translateY(-2px); /* small lift effect */
+  transform: translateY(-3px); /* small lift effect */
 }
 
 button:active {
@@ -150,7 +150,7 @@ button:focus {
   outline-offset: 2px;
 }
 
-/* ===== Saved Prompts Page ===== */
+/*  Saved Prompts Page */
 .sp {
   text-align: center;
   margin: 1rem 0;
@@ -191,7 +191,7 @@ button:focus {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Modal Styles ===== */
+/*  Modal Styles  */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -230,4 +230,44 @@ button:focus {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+/* ===== Mobile Responsive Adjustments ===== */
+@media (max-width: 500px) {
+  .quote, .prompt-card {
+    width: 95%;
+    font-size: 0.95rem;
+  }
+
+  .author {
+    font-size: 0.9rem;
+  }
+
+  /* Buttons shrink  */
+  button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Images and GIFs shrink */
+  .image-container img,
+  .gif-container img {
+    max-width: 90%;
+  }
+
+  /* Footer nav wraps */
+  .nav-footer nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* Modal tweaks */
+  .modal-box {
+    width: 90%;
+    max-width: none;
+  }
+
+  .modal-box textarea {
+    height: 80px;
+  }
 }
